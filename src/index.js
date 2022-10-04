@@ -46,7 +46,13 @@ footerText.addEventListener('dblclick', event => {
     alert("****Why'd you click here????****");
 })
 
-const contentDest = document.querySelector('.content-destination img');
-contentDest.addEventListener('focus', event => {
-    event.target.style.borderStyle = 'solid black, 2px';
-})
+const destinations = document.querySelectorAll('.destination');
+
+for (let destination of destinations) {
+    destination.addEventListener('mouseenter', event => {
+        destination.style.fontWeight = 'bold'
+    })
+    destination.addEventListener('mouseleave', () => {
+        destination.style.fontWeight = 'initial'
+    })
+}
