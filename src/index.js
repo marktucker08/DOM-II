@@ -3,7 +3,7 @@ import './less/index.less'
 // Your code goes here!
 
 window.onload = function (event) {
-    h1.textContent = "Fun Bus GO!";
+    heading.textContent = "Fun Bus GO!";
 }
 
 const introHeading = document.querySelector('.intro h2');
@@ -14,8 +14,8 @@ window.addEventListener('copy', () => {
         })
 })
 
-const h1 = document.querySelector('h1');
-h1.addEventListener('mouseover', event => {
+const heading = document.querySelector('h1');
+heading.addEventListener('mouseover', event => {
     event.target.style.backgroundColor = 'yellow';
 });
 
@@ -58,7 +58,7 @@ for (let destination of destinations) {
 
 const buttons = document.querySelector('.btn');
 function homeBtn (event) {
-    alert("preventDefault() won't let you check this!");
+    alert("preventDefault() won't let you click this!");
     event.preventDefault();
 }
 buttons.addEventListener('click', homeBtn);
