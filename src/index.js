@@ -32,14 +32,13 @@ function escKey(event){
 document.addEventListener('keydown', escKey);
 
 const imgContent = document.querySelector('.img-content');
-const h2Text = document.querySelector('.content-section h2');
-function selectContent(event) {
-    event.target.style.color = 'purple';
-}
-h2Text.addEventListener('select', event => {
+const h2Text = document.querySelector('.content-section p');
+function logSelection(event) {
+    const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
+    console.log(`You selected: ${selection}`);
     event.target.style.color = 'pink';
-});
-
+  }
+h2Text.addEventListener('select', logSelection);
 
 const footerText = document.querySelector('footer p');
 footerText.addEventListener('dblclick', event => {
@@ -56,3 +55,11 @@ for (let destination of destinations) {
         destination.style.fontWeight = 'initial'
     })
 }
+
+const buttons = document.querySelector('.btn');
+function homeBtn (event) {
+    alert("preventDefault() won't let you check this!");
+    event.preventDefault();
+}
+buttons.addEventListener('click', homeBtn);
+    
