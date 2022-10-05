@@ -3,7 +3,8 @@ import './less/index.less'
 // Your code goes here!
 
 window.onload = function (event) {
-    heading.textContent = "Fun Bus GO!";
+    heading.style.fontWeight = "bold";
+    heading.style.color = 'purple';
 }
 
 const introHeading = document.querySelector('.intro h2');
